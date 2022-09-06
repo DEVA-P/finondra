@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="die.css">
+<style> 
+    .container { 
+        display : block;
+        justify-self: center;
+        align-items: center; 
+        float: right;
+        width : 80%;
+        border:6px solid black;
+        height : 400px;
+        margin-right : 15px;
+        
+    } 
+    @media screen and (max-width: 900px) {
+      /* .dice {
+        perspective: 1300px; */
+      /* } */
+      .container{ 
+        width: 100%;
+        background-color: blue;
+      }
+    }
+    canvas{
+      width: 100%;
+      height: 100%;
+    }
+    #mail{
+        width: 100%; 
+        text-align: center;
+        margin-top: 10px;
+        height: 100px;
+        overflow: scroll;
+    }
+    .results{
+        width: 7%;
+        background-color: rgb(131, 234, 29);
+        float: right;
+        margin: 5px;
+        height: 50px;
+    }
+</style>
+<body>
+    message:
+    <input type="text" id="message">
+    <input type="submit" value="Submit" id="submit"><br><br>
+    Join Room:
+    <input type="text" id="room">
+    <input type="submit" value="Join" id="joinRoom">
+
+    <div id="mail">
+
+    </div> 
+    <div class="results" id="results">
+        Points : 
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- ---------------------------------------------------------------- -->
+    <div class="die-container">
+        <div class="dice">
+            <ol class="die-list odd-roll" data-roll="1" id="die-2">
+              <li class="die-item" data-side="1">
+                <span class="dot"></span>
+              </li>
+              <li class="die-item" data-side="2">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </li>
+              <li class="die-item" data-side="3">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </li>
+              <li class="die-item" data-side="4">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </li>
+              <li class="die-item" data-side="5">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </li>
+              <li class="die-item" data-side="6">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </li>
+            </ol>
+          </div> 
+          <br>
+          <button type="button" id="roll-button">Roll Dice</button>
+          
+    </div>
+    <!-- ---------------------------------------------------------------- -->
+
+    <div class="container"> 
+      <canvas width="800" height="350"></canvas>
+    </div>
+</body>
+<script type="module" src="script.js"></script>
+</html>
+
+
+
+
+<!-- <div class="unlock">
+            Enter the code to unlock :
+            <input type="text" name="keyToUnLock" id="keyToUnLock">
+        </div>
+        <div class="lock">
+            Enter the code to lock players:
+            <input type="text" name="lock" id="lock">
+        </div> -->
+
+<!--         
+    .unlock, .lock{
+      width: 50%;
+      padding: 10%;
+  } -->
